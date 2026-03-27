@@ -37,12 +37,12 @@ void section1_warmup() {
     // -----------------------------------------------------------------------
 
     // TODO: Declare two int variables (a and b)
-
+    int a, b;
     // TODO: Prompt the user and read both values with cin
-
+cout<< "Enter two integers";
     // TODO: Print "Sum = " followed by the result
-
-    cout << endl;
+cin >> a >> b;
+    cout << "Sum ="<< a+b << endl;
 
     // -----------------------------------------------------------------------
     // Exercise 1.2
@@ -52,12 +52,13 @@ void section1_warmup() {
     // -----------------------------------------------------------------------
 
     // TODO: Declare a double variable for Celsius
-
+    double celsius;
     // TODO: Prompt and read the value
-
+     cout<< "Enter temperature in Celcius";
+     cin >> celsius;
     // TODO: Calculate Fahrenheit and print it
-
-    cout << endl;
+   double Fahrenheit = celsius * 9/5 + 32 ;
+    cout << "F="<< Fahrenheit  << endl;
 }
 
 // ============================================================================
@@ -116,12 +117,15 @@ void section2_coreConcepts() {
     // -----------------------------------------------------------------------
 
     // TODO: Declare an int variable
-
+           int a ;
     // TODO: Prompt and read it
-
+   cout<< "Enter an integer";
+  cin>>a;
     // TODO: Use if / else if / else to print the correct message
-
-    cout << endl;
+if (a>0) { cout << "it is positive"<<endl ;}
+else if (a < 0) { cout<< "it is negative"<<endl ;}
+else { 
+    cout <<"the number is zero"<< endl;}
 
     // -----------------------------------------------------------------------
     // Exercise 2.2
@@ -133,10 +137,14 @@ void section2_coreConcepts() {
     // -----------------------------------------------------------------------
 
     // TODO: Declare two ints, prompt, and read them
-
+int x , y;
+cout << "Enter two integers";
+cin>> x >> y;
     // TODO: Write the if / else if / else chain
-
-    cout << endl;
+if (x == y) { cout<< "Equal"<<endl;}
+else if   (x > y) { cout<< "First is bigger"<<endl;}
+else  
+    { cout <<"Second is bigger"<< endl;}
 }
 
 // ============================================================================
@@ -155,8 +163,12 @@ void section3_guidedExercises() {
     // -----------------------------------------------------------------------
 
     // TODO: Implement the even/odd checker
-
-    cout << endl;
+int m ;
+cout << "Enter a integer" ;
+cin >> m ;
+if (m % 2==0) { cout<< m<< "Even" << endl; }
+else { cout <<m<< "Odd" << endl ;  }
+    
 
     // -----------------------------------------------------------------------
     // Exercise 3.2 — Simple Grade Calculator
@@ -172,8 +184,16 @@ void section3_guidedExercises() {
     // -----------------------------------------------------------------------
 
     // TODO: Implement the grade calculator
-
-    cout << endl;
+    int grade;
+     cout<< "Enter a grade";
+     cin >> grade ;
+     if (grade<0 and grade >100) { cout<< "İnvalid score" ; }
+     else if ( grade>= 90 ) { cout<< "Grade:A " << endl ; }
+     else if ( grade>= 80 ) { cout<< "Grade:B " << endl ; } 
+     else if ( grade>= 70 ) { cout<< "Grade:C " << endl ; }
+     else if ( grade>= 60 ) { cout<< "Grade:D " << endl ; }
+     else if ( grade<=60 ) { cout<< "Grade:F" << endl ; }
+    
 
     // -----------------------------------------------------------------------
     // Exercise 3.3 — Leap Year Checker
@@ -187,8 +207,14 @@ void section3_guidedExercises() {
     // -----------------------------------------------------------------------
 
     // TODO: Implement the leap year checker
-
-    cout << endl;
+      int year;
+      cout<< "Enter a year" ;
+      cin>> year;
+      if ((year% 4==0 && year % 100!=0) || (year%400==0 )) {
+          cout << year << "is a leap year" << endl;}
+          else  {   cout<< year<< " is not a leap year" << endl ;}
+      
+  
 
     // -----------------------------------------------------------------------
     // Exercise 3.4 — Triangle Validator
@@ -207,7 +233,12 @@ void section3_guidedExercises() {
     // -----------------------------------------------------------------------
 
     // TODO: Implement the triangle validator and classifier
-
+     double s1 , s2, s3;
+     cout << "Enter three side lenghts"<< endl;
+     cin >> s1 >> s2 >> s3 
+     if (s1+s2>s3 && s1+s3 > s2 && s2+s3>s1) {
+         cout << "Valid Triangle" ;
+         if ( s1==s2 && s2==s3) 
     cout << endl;
 
     // -----------------------------------------------------------------------
